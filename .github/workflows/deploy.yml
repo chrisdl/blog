@@ -35,6 +35,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: my-awesome-tech-blog # Replace with your project name in Cloudflare Pages
+          projectName: chrisdilorenzo # Replace with your project name in Cloudflare Pages
           directory: public # The directory where Hugo outputs the static files
           gitHubToken: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub Actions

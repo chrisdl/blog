@@ -70,7 +70,7 @@ For the deployment to work, you need to provide your Cloudflare API Token and Ac
     *   `CLOUDFLARE_API_TOKEN`: 
         *   **Where to get it:** Log in to your Cloudflare dashboard, go to "My Profile" (top right corner), then "API Tokens". Create a new token with at least "Cloudflare Pages: Edit" permissions. **Do NOT use your Global API Key for this.**
     *   `CLOUDFLARE_ACCOUNT_ID`: 
-        *   **Where to get it:** This can be found in your Cloudflare dashboard. Select your account, then on the right sidebar, under "API" section, you'll see "Account ID".
+        *   **Where to get it:** This can be found in your Cloudflare dashboard. There are 3 little dots for a menu, click those and you will see a "copy account id" option.
 
     The `GITHUB_TOKEN` secret is automatically provided by GitHub Actions and does not need to be manually added.
 
