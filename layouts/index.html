@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+
+    {{ .Content }}
+
+    <h2>Latest Posts</h2>
+    {{ range .Paginator.Pages }}
+        <article>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ .Summary | plainify | safeHTML }}
+            {{ if .Truncated }}
+                <a href="{{ .Permalink }}">Read More...</a>
+            {{ end }}
+        </article>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+
+{{ end }}

@@ -1,0 +1,21 @@
+baseURL: 'http://example.org/'
+languageCode: 'en-us'
+title: 'Chris DiLorenzo''s Weblog'
+paginate: 5 # Number of posts per page on list views
+
+# Enable the built-in RSS feed generation
+outputs:
+    home: ["HTML", "RSS"]
+
+enableEmoji: true
+enableGitInfo: false
+enableMissingTranslationContext: false
+
+taxonomies:
+  category: categories
+  tag: tags
+
+params:
+  description: "A simple tech blog."
+  dateFormat: "January 2, 2006"
+  mainSections: ["posts"] # Tell Hugo to consider 'posts' as the main section for listings

@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    margin: 2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+article {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+h1, h2, h3 {
+    color: #333;
+    line-height: 1.2;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 1em;
+}
+
+footer {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Pagination */
+nav[aria-label="Page navigation"] ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+nav[aria-label="Page navigation"] li {
+    margin: 0 0.5em;
+}
+
+nav[aria-label="Page navigation"] a {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+nav[aria-label="Page navigation"] a:hover {
+    background-color: #f8f8f8;
+}
+
+

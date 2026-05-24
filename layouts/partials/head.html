@@ -1,0 +1,9 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>{{ block "title" . }}{{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="stylesheet" href="/css/main.css">
+{{ with .OutputFormats.Get "RSS" }}
+    {{ printf "<link rel=\"%s\" type=\"%s\" href=\"%s\" title=\"%s\" />" .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}

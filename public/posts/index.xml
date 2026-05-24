@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My Awesome Tech Blog</title>
+    <link>http://localhost:49329/posts/</link>
+    <description>Recent content in Posts on My Awesome Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2026 10:00:00 -0500</lastBuildDate>
+    <atom:link href="http://localhost:49329/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:49329/posts/hello-world/</link>
+      <pubDate>Sun, 24 May 2026 10:00:00 -0500</pubDate>
+      <guid>http://localhost:49329/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to my new tech blog! This is the first post.&lt;/p&gt;&#xA;&lt;p&gt;Stay tuned for more updates.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

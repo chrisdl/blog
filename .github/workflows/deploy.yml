@@ -1,0 +1,40 @@
+name: Deploy to Cloudflare Pages
+on: # Triggers the workflow on push or pull request events for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Fetch Hugo themes (if any)
+          fetch-depth: 0 # Fetch all history for auto-update to work
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: my-awesome-tech-blog # Replace with your project name in Cloudflare Pages
+          directory: public # The directory where Hugo outputs the static files
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }} # Automatically provided by GitHub Actions
